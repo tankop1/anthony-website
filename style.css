@@ -12,6 +12,11 @@ body {
     overflow-x: hidden;
 }
 
+::selection {
+    color: white;
+    background-color: #ED3923;
+}
+
 /* ========== COMPONENTS ========== */
 
 h1 {
@@ -41,6 +46,21 @@ button:hover {
     transform: scale(1.05);
 }
 
+button.button-underline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.button-underline span {
+    display: block;
+    width: 110%;
+    height: 8px;
+    background-color: #ed3b23AA;
+    margin-bottom: -25px;
+}
+
 a {
     color: black;
     text-decoration: none;
@@ -50,6 +70,46 @@ a {
 
 a:hover {
     transform: scale(1.05);
+}
+
+/* ========== COMPONENT MEDIA QUERIES ========== */
+
+@media only screen and (max-width: 850px) {
+    h1 {
+        font-size: 6rem;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    h1 {
+        font-size: 4.5rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    h1 {
+        font-size: 3.25rem;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    h1 {
+        font-size: 3rem;
+    }
 }
 
 /* ========== HEADER ========== */
@@ -78,8 +138,8 @@ header #links {
 
 header .link-item {
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
     background-color: black;
     display: flex;
     justify-content: center;
@@ -98,8 +158,33 @@ header h2 {
     text-shadow: none;
 }
 
-header button {
-    width: 50px;
+/* ========== HEADER MEDIA QUERIES ========== */
+
+@media only screen and (max-width: 750px) {
+    header h2 {
+        padding-right: 50px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    header h2 {
+        padding-right: 0px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    header {
+        height: 90px;
+        flex-direction: column;
+        padding: 15px 15px;
+        padding-bottom: 25px;
+    }
+
+    header #menu-button {
+        position: fixed;
+        top: 25px;
+        right: 25px;
+    }
 }
 
 /* ========== NAVIGATION ========== */
@@ -131,10 +216,55 @@ nav h1 {
     font-size: 6.5rem;
 }
 
+#contact-link h1 {
+    color: white;
+    -webkit-text-stroke-color: #ED3923;
+    -webkit-text-stroke-width: 5px;
+}
+
+/* ========== NAVIGATION MEDIA QUERIES ========== */
+
+@media only screen and (max-width: 850px) {
+    nav h1 {
+        font-size: 5rem;
+    }
+
+    #contact-link h1 {
+        -webkit-text-stroke-width: 3px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    nav h1 {
+        font-size: 4rem;
+    }
+
+    #contact-link h1 {
+        -webkit-text-stroke-width: 2px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    nav h1 {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    nav h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    nav h1 {
+        font-size: 2rem;
+    }
+}
+
 /* ========== THE LATEST SECTION ========== */
 
 main {
-    background-color: red;
     height: 100%;
     overflow: hidden;
     position: relative;
@@ -142,6 +272,8 @@ main {
 
 main video {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 main #main-overlay {
@@ -164,6 +296,21 @@ main #main-overlay h1 {
 
 main #main-overlay h2 {
     color: white;
+    text-align: center;
+}
+
+/* ========== THE LATEST MEDIA QUERIES ========== */
+
+@media only screen and (max-width: 500px) {
+    main #main-overlay h2 {
+        margin-top: 15px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    main #main-overlay h2 {
+        width: 65%;
+    }
 }
 
 /* ========== ABOUT ME SECTION ========== */
@@ -204,13 +351,22 @@ section#about {
 }
 
 #about #about-text strong {
-    font-size: 1.15rem;
+    font-size: 1.5rem;
     font-style: italic;
 }
 
 #about #about-text p {
     font-size: 1.15rem;
     margin-top: 25px;
+}
+
+#about #about-text a {
+    display: inline-block;
+    font-size: 1.15rem;
+}
+
+#about-text a span {
+    width: 100%;
 }
 
 /* ========== MY STUFF SECTION ========== */
@@ -262,14 +418,21 @@ section#portfolio {
 
 #portfolio button {
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin-top: 35px;
+}
+
+#portfolio button span {
+    margin-bottom: -28px;
 }
 
 /* ========== CONTACT SECTION ========== */
 
 section#contact {
-    background-color: white;
+    background-image: url(assets/austin-background-grayscale.png);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
     height: calc(100% - 45px);
     display: flex;
     align-items: center;
@@ -278,10 +441,9 @@ section#contact {
 }
 
 #contact h1 {
-    text-shadow: none;
-    color: transparent;
-    -webkit-text-stroke-width: 4px;
-    -webkit-text-stroke-color: #242424;
+    color: white;
+    -webkit-text-stroke-color: #ED3923;
+    -webkit-text-stroke-width: 5px;
 }
 
 #contact form {
@@ -318,8 +480,8 @@ section#contact {
 }
 
 #contact form button {
-    margin-top: 15px;
-    font-size: 1rem;
+    margin-top: 25px;
+    font-size: 1.15rem;
 }
 
 /* ========== FOOTER ========== */
@@ -335,6 +497,6 @@ footer {
 
 footer h2 {
     color: white;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     font-weight: 400;
 }

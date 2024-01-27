@@ -25,3 +25,10 @@ function exitMenu()
     navSection.css("left", "100%");
     exitButton.css('display', 'none');
 }
+
+/*
+
+QUESTIONS FOR ANTHONY:
+1. Smooth scroll?
+
+*/
