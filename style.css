@@ -576,11 +576,13 @@ section#about {
 
 section#portfolio {
     background-color: #242424;
-    height: 115%;
+    min-height: 80%;
+    max-height: 200%;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: flex-start;
+    padding-bottom: 75px;
 }
 
 #portfolio h1 {
@@ -591,17 +593,15 @@ section#portfolio {
 }
 
 #portfolio #projects {
-    width: 75%;
-    height: 475px;
-    display: flex;
-    align-items: space-around;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    max-width: 80%;
+    margin: 0 auto;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 #portfolio #projects .project-item {
-    width: 350px;
-    height: 200px;
+    height: 150px;
     border-radius: 25px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
     transition: transform 400ms;
@@ -615,18 +615,32 @@ section#portfolio {
 #portfolio #projects .project-item img {
     width: 100%;
     height: 100%;
-    border-radius: 25px;
+    border-radius: 15px;
     object-fit: cover;
 }
 
 #portfolio button {
     color: white;
     font-size: 1.25rem;
-    margin-top: 35px;
+    margin-top: 50px;
 }
 
 #portfolio button span {
     margin-bottom: -28px;
+}
+
+/* ========== PORTFOLIO MEDIA QUERIES ========== */
+
+@media only screen and (max-width: 900px) {
+    #portfolio #projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #portfolio #projects {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 /* ========== CONTACT SECTION ========== */
@@ -688,6 +702,89 @@ section#contact {
     font-size: 1.15rem;
 }
 
+/* ========== CONTACT MEDIA QUERIES ========== */
+
+@media only screen and (max-width: 1000px) {
+    #contact h1 {
+        font-size: 7rem;
+        -webkit-text-stroke-width: 4px;
+    }
+
+    #contact form {
+        width: 65%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #contact h1 {
+        font-size: 6rem;
+        -webkit-text-stroke-width: 3px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    #contact h1 {
+        font-size: 5rem;
+        -webkit-text-stroke-width: 2px;
+    }
+
+    #contact form {
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    #contact h1 {
+        font-size: 4.5rem;
+    }
+
+    #contact form {
+        width: 80%;
+        border-radius: 15px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    #contact h1 {
+        font-size: 5.5rem;
+        width: 90%;
+        line-height: 6rem;
+    }
+
+    #contact form {
+        border-radius: 15px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    #contact h1 {
+        font-size: 4.5rem;
+        line-height: 5rem;
+    }
+
+    #contact form {
+        border-radius: 10px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #contact form {
+        border-radius: 10px;
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 325px) {
+    #contact h1 {
+        font-size: 4rem;
+        line-height: 4.5rem;
+    }
+
+    #contact form {
+        width: 90%;
+    }
+}
+
 /* ========== FOOTER ========== */
 
 footer {
@@ -703,4 +800,30 @@ footer h2 {
     color: white;
     font-size: 1.25rem;
     font-weight: 400;
+}
+
+/* ========== FOOTER MEDIA QUERIES ========== */
+
+@media only screen and (max-width: 700px) {
+    footer h2 {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    footer h2 {
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    footer h2 {
+        font-size: 1rem;
+    }
+
+    footer {
+        flex-direction: column;
+        height: 100px;
+        padding: 10px 15px;
+    }
 }
