@@ -339,7 +339,7 @@ section#about {
 }
 
 #about #about-text {
-    width: 50%;
+    width: 60%;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -348,6 +348,7 @@ section#about {
 
 #about #about-text h1 {
     text-shadow: none;
+    width: 150%;
 }
 
 #about #about-text strong {
@@ -367,6 +368,208 @@ section#about {
 
 #about-text a span {
     width: 100%;
+}
+
+/* ========== ABOUT ME MEDIA QUERIES ========== */
+
+@media only screen and (max-width: 1250px) {
+    #about #about-text h1 {
+        width: 100%;
+        font-size: 6.5rem;
+    }
+
+    #about #about-text {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    #about #about-text h1 {
+        font-size: 5.5rem;
+    }
+
+    #about #about-text strong {
+        font-size: 1.25rem;
+    }
+
+    #about #about-text p {
+        font-size: 1rem;
+    }
+
+    #about #about-text a {
+        font-size: 1rem;
+    }
+
+    #about #about-text a span {
+        margin-bottom: -24px;
+    }
+    
+    #about #img-container {
+        width: 350px;
+        height: 500px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #about #about-text {
+        width: 55%;
+    }
+
+    #about #about-text h1 {
+        font-size: 5.5rem;
+    }
+
+    #about #about-text strong {
+        font-size: 1.15rem;
+    }
+
+    #about #about-text p {
+        font-size: 0.9rem;
+    }
+
+    #about #about-text a {
+        font-size: 0.9rem;
+    }
+
+    #about #about-text a span {
+        margin-bottom: -22px;
+    }
+    
+    #about #img-container {
+        width: 275px;
+        height: 400px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #about #about-text {
+        width: 50%;
+    }
+
+    #about #about-text h1 {
+        font-size: 4rem;
+    }
+
+    #about #about-text strong {
+        font-size: 1rem;
+    }
+
+    #about #about-text p {
+        font-size: 0.8rem;
+    }
+
+    #about #about-text a {
+        font-size: 0.8rem;
+    }
+
+    #about #about-text a span {
+        margin-bottom: -21px;
+    }
+    
+    #about #img-container {
+        width: 250px;
+        height: 375px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    #about #img-container {
+        width: 75%;
+        height: 250px;
+        margin-right: 0;
+    }
+
+    section#about {
+        flex-direction: column;
+    }
+
+    #about #about-text {
+        width: 75%;
+    }
+
+    #about #about-text h1 {
+        font-size: 5rem;
+        text-align: center;
+    }
+
+    #about #about-text strong {
+        text-align: center;
+    }
+
+    #about #about-text p {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #about #about-text h1 {
+        font-size: 4rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #about #about-text h1 {
+        font-size: 3.5rem;
+        margin-top: 15px;
+    }
+
+    #about #about-text {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #about #about-text h1 {
+        font-size: 3.25rem;
+    }
+
+    #about #about-text {
+        width: 90%;
+    }
+
+    #about #about-text strong {
+        font-size: 0.9rem;
+    }
+
+    #about #about-text p {
+        font-size: 0.7rem;
+    }
+
+    #about #about-text a {
+        font-size: 0.7rem;
+    }
+
+    #about #about-text a span {
+        margin-bottom: -18px;
+    }
+}
+
+@media only screen and (max-width: 325px) {
+    #about #about-text h1 {
+        font-size: 3rem;
+    }
+
+    #about #about-text strong {
+        font-size: 0.85rem;
+    }
+
+    #about #about-text p {
+        font-size: 0.65rem;
+    }
+
+    #about #about-text a {
+        font-size: 0.65rem;
+    }
+
+    #about #about-text a span {
+        height: 6px;
+        margin-bottom: -16px;
+    }
+
+    #about #img-container {
+        width: 85%;
+        height: 200px;
+    }
 }
 
 /* ========== MY STUFF SECTION ========== */
@@ -441,6 +644,7 @@ section#contact {
 }
 
 #contact h1 {
+    text-align: center;
     color: white;
     -webkit-text-stroke-color: #ED3923;
     -webkit-text-stroke-width: 5px;
