@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: "Alata", sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+/* ========== COMPONENTS ========== */
+
+h1 {
+    font-family: "Bevan", serif;
+    font-size: 8rem;
+    font-weight: 400;
+    font-style: italic;
+    text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-weight: 400;
+    text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-family: "Alata", sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+    transition: transform 300ms;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 300ms;
+}
+
+a:hover {
+    transform: scale(1.05);
+}
+
+/* ========== HEADER ========== */
+
+header {
+    background-color: white;
+    height: 50px;
+    width: 100%;
+    padding: 0px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+}
+
+header #links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+}
+
+header .link-item {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .link-item i {
+    color: white;
+}
+
+header h2 {
+    padding-right: 100px;
+    font-weight: 500;
+    font-size: 1.75rem;
+    text-align: center;
+    text-shadow: none;
+}
+
+header button {
+    width: 50px;
+}
+
+/* ========== NAVIGATION ========== */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: left 600ms;
+}
+
+nav button#exit {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    display: none;
+}
+
+nav h1 {
+    text-shadow: none;
+    font-size: 6.5rem;
+}
+
+/* ========== THE LATEST SECTION ========== */
+
+main {
+    background-color: red;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+main video {
+    width: 100%;
+}
+
+main #main-overlay {
+    background-color: rgba(0, 0, 0, 0.55);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main #main-overlay h1 {
+    color: white;
+    margin-bottom: -25px;
+}
+
+main #main-overlay h2 {
+    color: white;
+}
+
+/* ========== ABOUT ME SECTION ========== */
+
+section#about {
+    background-color: white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#about #img-container {
+    width: 400px;
+    height: 600px;
+    border-radius: 25px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-right: 5%;
+}
+
+#about img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+#about #about-text {
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#about #about-text h1 {
+    text-shadow: none;
+}
+
+#about #about-text strong {
+    font-size: 1.15rem;
+    font-style: italic;
+}
+
+#about #about-text p {
+    font-size: 1.15rem;
+    margin-top: 25px;
+}
+
+/* ========== MY STUFF SECTION ========== */
+
+section#portfolio {
+    background-color: #242424;
+    height: 115%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#portfolio h1 {
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 50px 0px;
+}
+
+#portfolio #projects {
+    width: 75%;
+    height: 475px;
+    display: flex;
+    align-items: space-around;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#portfolio #projects .project-item {
+    width: 350px;
+    height: 200px;
+    border-radius: 25px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    transition: transform 400ms;
+    cursor: pointer;
+}
+
+#portfolio #projects .project-item:hover {
+    transform: scale(1.05);
+}
+
+#portfolio #projects .project-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+#portfolio button {
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 35px;
+}
+
+/* ========== CONTACT SECTION ========== */
+
+section#contact {
+    background-color: white;
+    height: calc(100% - 45px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#contact h1 {
+    text-shadow: none;
+    color: transparent;
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: #242424;
+}
+
+#contact form {
+    background-color: white;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+    width: 50%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+#contact form input, #contact form textarea {
+    font-family: "Alata", sans-serif;
+    font-weight: 400;
+    outline: none;
+    border: none;
+    box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    width: 90%;
+    height: 45px;
+    padding-left: 15px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+#contact form textarea {
+    padding-top: 10px;
+    height: 100px;
+    resize: none;
+}
+
+#contact form button {
+    margin-top: 15px;
+    font-size: 1rem;
+}
+
+/* ========== FOOTER ========== */
+
+footer {
+    background-color: #242424;
+    height: 45px;
+    padding: 0px 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer h2 {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 400;
+}

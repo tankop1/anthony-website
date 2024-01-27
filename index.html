@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="anthony luparello.">
+    <meta name="description" content="my name is anthony luparello, and i'm a video editor and student at the university of texas at austin.">
+    <meta name="keywords" content="anthony, luparello, anthony luparello, video editor, video editing">
+    <meta name="robots" content="index">
+    <meta name="language" content="English">
+    <meta name="author" content="Anthony Luparello">
+
+    <title>anthony luparello.</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Bevan:ital@0;1&display=swap" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/0bb23f7c87.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+
+        <div id="links">
+            <button class="link-item">
+                <i class="fa-brands fa-youtube fa-lg"></i>
+            </button>
+
+            <button class="link-item">
+                <i class="fa-brands fa-linkedin-in fa-lg"></i>
+            </button>
+
+            <button class="link-item">
+                <i class="fa-brands fa-instagram fa-lg"></i>
+            </button>
+
+            <button class="link-item">
+                <i class="fa-solid fa-envelope fa-lg"></i>
+            </button>
+        </div>
+
+        <h2>anthony luparello.</h2>
+
+        <button id="menu-button">
+            <i class="fa-solid fa-bars fa-2xl"></i>
+        </button>
+
+    </header>
+
+    <nav id="nav">
+        <button id="exit">
+            <i class="fa-solid fa-xmark fa-2xl"></i>
+        </button>
+
+        <a class="nav-item" href="#home" id="home-link">
+            <h1>the latest.</h1>
+        </a>
+
+        <a class="nav-item" href="#about" id="about-link">
+            <h1>about me.</h1>
+        </a>
+
+        <a class="nav-item" href="#portfolio" id="portfolio-link">
+            <h1>my stuff.</h1>
+        </a>
+
+        <a class="nav-item" href="#contact" id="contact-link">
+            <h1>get in touch.</h1>
+        </a>
+    </nav>
+
+    <main id="home">
+        <video src="assets/latest-video-short.mp4" autoplay muted loop>Your browser does not support this video.</video>
+
+        <div id="main-overlay">
+            <h1>the latest.</h1>
+            <h2>- some highlights from the recent videos i've made -</h2>
+        </div>
+    </main>
+
+    <section id="about">
+        <div id="img-container">
+            <img src="assets/anthony-picture.JPG" alt="picture of anthony" />
+        </div>
+
+        <div id="about-text">
+            <h1>about me.</h1>
+            <strong>“Enjoy the best things in your life 'cause you ain’t gonna get to live it twice.” - Mac Miller</strong>
+            <p>I really resonate with this quote as it made me realize that if I am going to live one life, I might as well live it trying to conquer my dreams. My name is Anthony Luparello, and I am a journalism student currently enrolled at the University of Texas at Austin, and it goes without saying that I absolutely love video editing. Whether it be films, commercials, all of the above, I love flaunting my creativity through visual means in order to help inspire and create emotions out of the people watching. In addition to editing, I am also really into cinematography, graphic design, screenwriting and social media management. If you'd like to collaborate, feel free to contact me below or email me at antluparello@gmail.com. </p>
+        </div>
+    </section>
+
+    <section id="portfolio">
+
+        <h1>my stuff.</h1>
+
+        <div id="projects">
+
+            <div class="project-item">
+                <img src="assets/example-thumbnail.jpg" alt="project thumbnail" />
+            </div>
+
+            <div class="project-item">
+                <img src="assets/example-thumbnail.jpg" alt="project thumbnail" />
+            </div>
+
+            <div class="project-item">
+                <img src="assets/example-thumbnail.jpg" alt="project thumbnail" />
+            </div>
+
+            <div class="project-item">
+                <img src="assets/example-thumbnail.jpg" alt="project thumbnail" />
+            </div>
+
+            <div class="project-item">
+                <img src="assets/example-thumbnail.jpg" alt="project thumbnail" />
+            </div>
+
+            <div class="project-item">
+                <img src="assets/example-thumbnail.jpg" alt="project thumbnail" />
+            </div>
+
+        </div>
+
+        <button>- see more projects -</button>
+
+    </section>
+
+    <section id="contact">
+        <h1>get in touch.</h1>
+
+        <form action="https://api.web3forms.com/submit" method="POST">
+
+            <input type="hidden" name="access_key" value="51f09a4c-ac06-4604-b42f-5eff15c2afae">
+        
+            <input type="text" name="name" id="name" placeholder="name" required>
+            <input type="email" name="email" id="email" placeholder="email" required>
+            <textarea name="message" id="message" placeholder="message" required></textarea>
+            <!--<div class="h-captcha" data-captcha="true"></div>-->
+
+            <button type="submit">- submit -</button>
+        
+        </form>
+        
+        <script src="https://web3forms.com/client/script.js" async defer></script>
+    </section>
+
+    <footer>
+        <h2>© copyright 2023.</h2>
+        <h2>anthony luparello.</h2>
+        <h2>all rights reserved.</h2>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
