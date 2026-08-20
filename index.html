@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="title" content="anthony luparello." />
+    <meta name="title" content="Anthony Luparello — Video Editor" />
     <meta
       name="description"
-      content="my name is anthony luparello, and i'm a video editor and student at the university of texas at austin."
+      content="Anthony Luparello is a video editor and journalism student at the University of Texas at Austin."
     />
     <meta
       name="keywords"
@@ -15,14 +15,15 @@
     <meta name="robots" content="index" />
     <meta name="language" content="English" />
     <meta name="author" content="Anthony Luparello" />
+    <meta name="theme-color" content="#0B0B0C" />
 
-    <title>anthony luparello.</title>
+    <title>Anthony Luparello — Video Editor</title>
 
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Alata&family=Bevan:ital@0;1&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
 
@@ -44,228 +45,145 @@
       href="assets/favicon/favicon-16x16.png"
     />
     <link rel="manifest" href="assets/favicon/site.webmanifest" />
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script
-      src="https://kit.fontawesome.com/0bb23f7c87.js"
-      crossorigin="anonymous"
-    ></script>
   </head>
   <body>
-    <header>
-      <div id="links">
-        <a
-          class="link-item"
-          href="https://www.youtube.com/channel/UCow1J4wkTQNcfcOfszwdaBw"
-          target="_blank"
-        >
-          <i class="fa-brands fa-youtube fa-lg"></i>
-        </a>
-
-        <a
-          class="link-item"
-          href="https://www.linkedin.com/in/anthony-luparello-87b329249/"
-          target="_blank"
-        >
-          <i class="fa-brands fa-linkedin-in fa-lg"></i>
-        </a>
-
-        <a
-          class="link-item"
-          href="https://www.instagram.com/ant.lup/"
-          target="_blank"
-        >
-          <i class="fa-brands fa-instagram fa-lg"></i>
-        </a>
-
-        <a class="link-item" href="mailto:antluparello@gmail.com">
-          <i class="fa-solid fa-envelope fa-lg"></i>
-        </a>
-      </div>
-
-      <h2>anthony luparello.</h2>
-
-      <button id="menu-button">
-        <i class="fa-solid fa-bars fa-2xl"></i>
-      </button>
+    <header class="site-header">
+      <a class="wordmark" href="#top">anthony luparello<span>.</span></a>
+      <nav class="site-nav">
+        <a href="#work">Reel</a>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a class="pill" href="#contact">Contact</a>
+      </nav>
     </header>
 
-    <nav id="nav">
-      <button id="exit">
-        <i class="fa-solid fa-xmark fa-2xl"></i>
-      </button>
-
-      <a class="nav-item" href="#home" id="home-link">
-        <h1>the latest.</h1>
-      </a>
-
-      <a class="nav-item" href="#about" id="about-link">
-        <h1>about me.</h1>
-      </a>
-
-      <a class="nav-item" href="#portfolio" id="portfolio-link">
-        <h1>my stuff.</h1>
-      </a>
-
-      <a class="nav-item" href="#contact" id="contact-link">
-        <h1>get in touch.</h1>
-      </a>
-    </nav>
-
-    <main id="home">
+    <main id="top" class="hero">
       <video
         src="assets/editting-compilation.mp4"
         autoplay
         muted
         loop
         playsinline
-      >
-        Your browser does not support this video.
-      </video>
-
-      <div id="main-overlay">
-        <h1>the latest.</h1>
-        <h2>- some highlights from the recent videos i've made -</h2>
+        poster="assets/verified-thumbnail.jpg"
+      ></video>
+      <div class="hero-scrim"></div>
+      <div class="hero-content">
+        <p class="eyebrow"><span class="dot"></span>Showreel · Austin, Texas</p>
+        <h1>Anthony<br /><em>Luparello</em></h1>
+        <div class="hero-foot">
+          <p class="lede">
+            Video editor and journalism student at UT Austin — highlights from the most
+            recent work.
+          </p>
+          <ul class="tags">
+            <li>Editing</li>
+            <li>Cinematography</li>
+            <li>Graphic design</li>
+            <li>Screenwriting</li>
+          </ul>
+        </div>
       </div>
     </main>
 
-    <section id="about">
-      <div id="img-container">
-        <img src="assets/anthony-picture.JPG" alt="picture of anthony" />
+    <section id="work" class="work">
+      <div class="section-head" data-reveal>
+        <h2>Selected work</h2>
+        <span class="counter">Six of 40+</span>
       </div>
 
-      <div id="about-text">
-        <h1>about me.</h1>
-        <strong
-          >“Enjoy the best things in your life 'cause you ain’t gonna get to
-          live it twice.” - Mac Miller</strong
+      <div class="grid">
+        <a class="card" data-reveal target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=l2dLhQAkbjg">
+          <img src="assets/verified-thumbnail.jpg" alt="Thumbnail for a video edited by Anthony" />
+        </a>
+        <a class="card" data-reveal target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=4UyaVPtemxk">
+          <img src="assets/october-thumbnail.jpg" alt="Thumbnail for a video edited by Anthony" />
+        </a>
+        <a class="card" data-reveal target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=t_HXQ5X0pO0">
+          <img src="assets/caleb-thumbnail.jpg" alt="Thumbnail for a video edited by Anthony" />
+        </a>
+        <a class="card" data-reveal target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=STAMn1Fs5Zo&t=1s">
+          <img src="assets/pitch-thumbnail.jpg" alt="Thumbnail for a video edited by Anthony" />
+        </a>
+        <a class="card" data-reveal target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=nye8fGnpNvg">
+          <img src="assets/terrence-thumbnail.jpg" alt="Thumbnail for a video edited by Anthony" />
+        </a>
+        <a class="card" data-reveal target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=1wO8qAMZG8k">
+          <img src="assets/rr-thumbnail.jpg" alt="Thumbnail for a video edited by Anthony" />
+        </a>
+      </div>
+
+      <div class="center" data-reveal>
+        <a
+          class="pill"
+          target="_blank"
+          rel="noopener"
+          href="https://www.youtube.com/channel/UCow1J4wkTQNcfcOfszwdaBw"
+          >See more projects →</a
         >
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <figure data-reveal>
+        <img src="assets/anthony-picture.JPG" alt="Portrait of Anthony Luparello" />
+        <figcaption>Anthony Luparello · Austin, TX</figcaption>
+      </figure>
+
+      <div class="about-text" data-reveal>
+        <h2>About</h2>
+        <blockquote>
+          “Enjoy the best things in your life ’cause you ain’t gonna get to live it twice.”
+          <cite>Mac Miller</cite>
+        </blockquote>
         <p>
-          I really resonate with this quote as it made me realize that if I am
-          going to live one life, I might as well live it trying to conquer my
-          dreams. My name is Anthony Luparello, and I am a journalism student
-          currently enrolled at the University of Texas at Austin, and it goes
-          without saying that I absolutely love video editing. Whether it be
-          films, commercials, all of the above, I love flaunting my creativity
-          through visual means in order to help inspire and create emotions out
-          of the people watching. In addition to editing, I am also really into
-          cinematography, graphic design, screenwriting and social media
-          management. If you'd like to collaborate, feel free to
-          <a href="#contact" class="button-underline">
-            <span></span>
-            contact me below
-          </a>
-          or email me at
-          <a href="mailto:antluparello@gmail.com" class="button-underline">
-            <span></span>
-            antluparello@gmail.com.
-          </a>
+          I really resonate with this quote as it made me realize that if I am going to live
+          one life, I might as well live it trying to conquer my dreams. My name is Anthony
+          Luparello, and I am a journalism student currently enrolled at the University of
+          Texas at Austin, and it goes without saying that I absolutely love video editing.
+        </p>
+        <p>
+          Whether it be films, commercials, all of the above, I love flaunting my creativity
+          through visual means in order to help inspire and create emotions out of the people
+          watching. In addition to editing, I am also really into cinematography, graphic
+          design, screenwriting and social media management.
+        </p>
+        <p>
+          If you’d like to collaborate, <a href="#contact">get in touch below</a> or email me
+          at <a href="mailto:antluparello@gmail.com">antluparello@gmail.com</a>.
         </p>
       </div>
     </section>
 
-    <section id="portfolio">
-      <h1>my stuff.</h1>
+    <section id="contact" class="contact">
+      <div class="contact-inner" data-reveal>
+        <div>
+          <h2>Let’s make<br /><em>something.</em></h2>
+          <p class="lede">Available for edits, collaborations and freelance work.</p>
+          <ul class="links">
+            <li><a href="mailto:antluparello@gmail.com">antluparello@gmail.com</a></li>
+            <li>
+              <a target="_blank" rel="noopener" href="https://www.youtube.com/channel/UCow1J4wkTQNcfcOfszwdaBw">YouTube</a>
+            </li>
+            <li><a target="_blank" rel="noopener" href="https://www.instagram.com/ant.lup/">Instagram</a></li>
+            <li>
+              <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/anthony-luparello-87b329249/">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
 
-      <div id="projects">
-        <a
-          class="project-item"
-          target="_blank"
-          href="https://www.youtube.com/watch?v=l2dLhQAkbjg"
-        >
-          <img src="assets/verified-thumbnail.jpg" alt="project thumbnail" />
-        </a>
-
-        <a
-          class="project-item"
-          target="_blank"
-          href="https://www.youtube.com/watch?v=4UyaVPtemxk"
-        >
-          <img src="assets/october-thumbnail.jpg" alt="project thumbnail" />
-        </a>
-
-        <a
-          class="project-item"
-          target="_blank"
-          href="https://www.youtube.com/watch?v=t_HXQ5X0pO0"
-        >
-          <img src="assets/caleb-thumbnail.jpg" alt="project thumbnail" />
-        </a>
-
-        <a
-          class="project-item"
-          target="_blank"
-          href="https://www.youtube.com/watch?v=STAMn1Fs5Zo&t=1s"
-        >
-          <img src="assets/pitch-thumbnail.jpg" alt="project thumbnail" />
-        </a>
-
-        <a
-          class="project-item"
-          target="_blank"
-          href="https://www.youtube.com/watch?v=nye8fGnpNvg"
-        >
-          <img src="assets/terrence-thumbnail.jpg" alt="project thumbnail" />
-        </a>
-
-        <a
-          class="project-item"
-          target="_blank"
-          href="https://www.youtube.com/watch?v=1wO8qAMZG8k"
-        >
-          <img src="assets/rr-thumbnail.jpg" alt="project thumbnail" />
-        </a>
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="51f09a4c-ac06-4604-b42f-5eff15c2afae" />
+          <input type="text" name="name" id="name" placeholder="Name" required />
+          <input type="email" name="email" id="email" placeholder="Email" required />
+          <textarea name="message" id="message" placeholder="Message" required></textarea>
+          <button type="submit">Send message</button>
+        </form>
       </div>
-
-      <a
-        class="button-underline"
-        href="https://www.youtube.com/channel/UCow1J4wkTQNcfcOfszwdaBw"
-        target="_blank"
-      >
-        <span></span>
-        see more projects
-      </a>
     </section>
 
-    <section id="contact">
-      <h1>get in touch.</h1>
-
-      <form action="https://api.web3forms.com/submit" method="POST">
-        <input
-          type="hidden"
-          name="access_key"
-          value="51f09a4c-ac06-4604-b42f-5eff15c2afae"
-        />
-
-        <input type="text" name="name" id="name" placeholder="name" required />
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="email"
-          required
-        />
-        <textarea
-          name="message"
-          id="message"
-          placeholder="message"
-          required
-        ></textarea>
-        <!--<div class="h-captcha" data-captcha="true"></div>-->
-
-        <button type="submit" class="button-underline">
-          <span></span>
-          submit
-        </button>
-      </form>
-
-      <script src="https://web3forms.com/client/script.js" async defer></script>
-    </section>
-
-    <footer>
-      <h2>© copyright 2023.</h2>
-      <h2>anthony luparello.</h2>
-      <h2>all rights reserved.</h2>
+    <footer class="site-footer">
+      <span>© 2026 Anthony Luparello</span>
+      <span>All rights reserved</span>
     </footer>
 
     <script src="script.js"></script>

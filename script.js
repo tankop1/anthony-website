@@ -1,34 +1,29 @@
-// MENU FUNCTIONALITY
+// Scroll reveal — fades sections in once as they enter the viewport.
 
-let menuButton = $('#menu-button');
-let exitButton = $('#exit');
-let navSection = $('#nav');
+(function () {
+  var nodes = document.querySelectorAll("[data-reveal]");
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-let homeLink = $('#home-link');
-let aboutLink = $('#about-link');
-let portfolioLink = $('#portfolio-link');
-let contactLink = $('#contact-link');
+  if (reduced || !("IntersectionObserver" in window)) {
+    nodes.forEach(function (n) {
+      n.classList.add("is-visible");
+    });
+    return;
+  }
 
-menuButton.click(() => {
-    navSection.css("left", "0");
-    exitButton.css('display', 'block');
-});
+  var observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { rootMargin: "0px 0px -12% 0px", threshold: 0.05 }
+  );
 
-exitButton.click(exitMenu);
-homeLink.click(exitMenu);
-aboutLink.click(exitMenu);
-portfolioLink.click(exitMenu);
-contactLink.click(exitMenu);
-
-function exitMenu()
-{
-    navSection.css("left", "100%");
-    exitButton.css('display', 'none');
-}
-
-/*
-
-QUESTIONS FOR ANTHONY:
-1. Smooth scroll?
-
-*/
+  nodes.forEach(function (n) {
+    observer.observe(n);
+  });
+})();
